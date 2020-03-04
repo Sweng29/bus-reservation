@@ -1,9 +1,13 @@
 package com.mantistech.busreservation.model.bus;
 
+import javax.persistence.*;
 import java.util.List;
-
+@Entity
+@Table(name = "trip_schedules")
 public class TripSchedule {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long tripScheduleId;
     private String tripDate;
     private Integer availableSeats;

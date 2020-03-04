@@ -1,11 +1,19 @@
 package com.mantistech.busreservation.model.bus;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "buses")
 public class Bus {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long busId;
     private String make;
     private String code;
     private String capacity;
+    @ManyToOne
+    @JoinColumn(name="agency_id", nullable=false)
     private Agency agency;
 
     public Long getBusId() {

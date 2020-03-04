@@ -2,15 +2,22 @@ package com.mantistech.busreservation.model.bus;
 
 import com.mantistech.busreservation.model.user.User;
 
+import javax.persistence.*;
 import java.util.Set;
-
+@Entity
+@Table(name = "agency_details")
 public class Agency {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long agencyId;
     private String name;
     private String code;
     private String details;
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable=false)
     private User owner;
+    @OneToMany(mappedBy = "agency")
     private Set<Bus> buses;
 
     public Long getAgencyId() {

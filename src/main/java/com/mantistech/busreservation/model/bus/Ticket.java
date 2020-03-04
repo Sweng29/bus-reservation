@@ -2,7 +2,13 @@ package com.mantistech.busreservation.model.bus;
 
 import com.mantistech.busreservation.model.user.User;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tickets")
 public class Ticket {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ticketId;
     private String seatNumber;
     private boolean isCancellable;

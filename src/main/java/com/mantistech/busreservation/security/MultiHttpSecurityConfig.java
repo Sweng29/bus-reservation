@@ -99,7 +99,7 @@ public class MultiHttpSecurityConfig {
                 web.ignoring().antMatchers(
                         "/resources/**", "/static/**", "/css/**", "/js/**", "/images/**",
                         "/resources/static/**", "/css/**", "/js/**", "/img/**", "/fonts/**",
-                        "/images/**", "/scss/**", "/vendor/**", "/favicon.ico", "/auth/**", "/favicon.png",
+                        "/images/**", "/scss/**", "/dashboard/**", "/favicon.ico", "/auth/**", "/favicon.png",
                         "/v2/api-docs", "/configuration/ui", "/configuration/security", "/swagger-ui.html",
                         "/webjars/**", "/swagger-resources/**", "/swagge‌​r-ui.html", "/actuator",
                         "/actuator/**"

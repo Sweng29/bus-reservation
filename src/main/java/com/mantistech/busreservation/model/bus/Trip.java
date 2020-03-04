@@ -1,7 +1,13 @@
 package com.mantistech.busreservation.model.bus;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "trips")
 public class Trip {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long tripId;
     private Double fare;
     private String journeyTime;
