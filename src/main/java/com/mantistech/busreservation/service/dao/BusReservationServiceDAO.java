@@ -6,7 +6,7 @@ import com.mantistech.busreservation.dto.model.user.UserDTO;
 import java.util.List;
 import java.util.Set;
 
-public interface BusReservationService {
+public interface BusReservationServiceDAO {
 
     //Stop related methods
     Set<StopDTO> getAllStops();

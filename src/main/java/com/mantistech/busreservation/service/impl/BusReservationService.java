@@ -12,7 +12,7 @@ import com.mantistech.busreservation.model.bus.*;
 import com.mantistech.busreservation.model.user.User;
 import com.mantistech.busreservation.repository.bus.*;
 import com.mantistech.busreservation.repository.user.UserRepository;
-import com.mantistech.busreservation.service.dao.BusReservationService;
+import com.mantistech.busreservation.service.dao.BusReservationServiceDAO;
 import com.mantistech.busreservation.util.RandomStringUtil;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ import static com.mantistech.busreservation.enums.ExceptionType.ENTITY_EXCEPTION
 import static com.mantistech.busreservation.enums.ExceptionType.ENTITY_NOT_FOUND;
 
 @Service
-public class BusReservationServiceDAOImpl implements BusReservationService{
+public class BusReservationService implements BusReservationServiceDAO {
 
     @Autowired
     private BusRepository busRepository;
